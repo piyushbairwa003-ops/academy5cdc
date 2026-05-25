@@ -152,7 +152,6 @@
     }
     .logo-outer { position: relative; width: 112px; height: 112px; }
 
-    /* Conic ring — cyan + gold */
     .lb1 {
       position: absolute; inset: -6px; border-radius: 50%;
       border: 2.5px solid transparent;
@@ -177,7 +176,6 @@
     }
     .l-img img { width:100%; height:100%; object-fit:cover; }
 
-    /* Corner dots */
     .ldot { position:absolute; width:7px; height:7px; border-radius:50%; }
     .ld1 { top:-3px;    left:50%;  transform:translateX(-50%); background:var(--bull);  box-shadow:0 0 10px var(--bull); }
     .ld2 { bottom:-3px; left:50%;  transform:translateX(-50%); background:var(--bull);  box-shadow:0 0 10px var(--bull); }
@@ -185,7 +183,6 @@
     .ld4 { right:-3px;  top:50%;   transform:translateY(-50%); background:var(--gold);  box-shadow:0 0 10px var(--gold); }
     @keyframes bSpin { to { transform:rotate(360deg); } }
 
-    /* Tag badge */
     .bull-tag {
       margin-top: 13px;
       background: linear-gradient(135deg, var(--bull2), var(--bull), var(--bull3));
@@ -195,6 +192,7 @@
       text-transform: uppercase;
       box-shadow: 0 0 20px rgba(0,180,255,.5);
       animation: tagGlow 2s ease-in-out infinite alternate;
+      text-align: center;
     }
     @keyframes tagGlow {
       0%   { box-shadow:0 0 10px rgba(0,180,255,.35); }
@@ -271,7 +269,7 @@
 
     /* ── STATS ── */
     .stats {
-      display: flex; gap: 20px;
+      display: flex; gap: 20px; align-items: center;
       margin-top: 14px;
       animation: fadeUp .5s .38s ease both;
     }
@@ -283,7 +281,7 @@
     .sv.g { color: var(--green); }
     .sv.y { color: var(--gold); }
     .sl { font-size:8.5px; color:var(--mut); text-transform:uppercase; letter-spacing:.1em; margin-top:2px; }
-    .sdiv { width:1px; background:var(--bdr); align-self:stretch; }
+    .sdiv { width:1px; height:36px; background:var(--bdr); }
 
     /* ── FEATURE CARDS ── */
     .cards {
@@ -293,6 +291,7 @@
       animation: fadeUp .5s .44s ease both;
     }
     .card {
+      display: flex; flex-direction: column; align-items: center;
       text-decoration: none;
       background: rgba(0,229,255,.05);
       border: 1px solid var(--bdr);
@@ -308,7 +307,7 @@
     .ci { font-size: 19px; display:block; margin-bottom:4px; }
     .cl { font-size: 8.5px; font-weight:700; color:var(--mut); text-transform:uppercase; letter-spacing:.07em; line-height:1.3; }
 
-    /* ── OUTLINE BUTTON ── */
+    /* ── CTA BUTTON ── */
     .cta-wrap {
       width: 100%; max-width: 340px;
       margin-top: 16px;
@@ -367,7 +366,7 @@
     }
 
     /* ════════════════════════════════════
-       PHONE  ≤ 480px
+       PHONE ≤ 480px
     ════════════════════════════════════ */
     @media (max-width: 480px) {
       html, body { overflow: hidden; }
@@ -377,7 +376,6 @@
       .hdr-txt { font-size: 9px; letter-spacing: .38em; }
       .hdr-line { max-width: 38px; }
 
-      /* Logo BIGGER on phone */
       .logo-outer { width: 112px; height: 112px; }
       .bull-tag { margin-top: 13px; font-size: 10px; padding: 5px 15px; letter-spacing: .32em; }
 
@@ -407,7 +405,6 @@
       .cta-wrap { margin-top: 15px; max-width: 100%; padding: 0 2px; }
       .btn { font-size: 13.5px; padding: 15px 18px; letter-spacing: .1em; border-radius: 9px; border-width: 2px; }
 
-      /* Grid texture more visible on phone */
       .grid {
         background-image:
           linear-gradient(rgba(0,229,255,0.07) 1px, transparent 1px),
@@ -435,7 +432,7 @@
     }
 
     /* ════════════════════════════════════
-       LAPTOP  ≥ 768px
+       LAPTOP ≥ 768px
     ════════════════════════════════════ */
     @media (min-width: 768px) {
       .page { padding: 24px 38px 30px; }
@@ -494,7 +491,6 @@
   <!-- Candlestick chart bg -->
   <div class="chart-bg">
     <svg viewBox="0 0 1440 300" preserveAspectRatio="none" fill="none">
-      <!-- Bullish candles -->
       <rect x="40"  y="180" width="18" height="80" fill="rgba(0,229,255,0.3)"/>
       <line x1="49"  y1="160" x2="49"  y2="270" stroke="rgba(0,229,255,0.5)" stroke-width="2"/>
       <rect x="90"  y="140" width="18" height="100" fill="rgba(0,229,255,0.3)"/>
@@ -511,7 +507,6 @@
       <line x1="349" y1="100" x2="349" y2="210" stroke="rgba(255,68,68,0.5)"  stroke-width="2"/>
       <rect x="390" y="40"  width="18" height="180" fill="rgba(0,229,255,0.3)"/>
       <line x1="399" y1="20"  x2="399" y2="230" stroke="rgba(0,229,255,0.5)" stroke-width="2"/>
-      <!-- Trend line -->
       <polyline points="0,280 200,240 400,180 600,130 800,80 1000,50 1200,30 1440,10"
         stroke="rgba(0,229,255,0.4)" stroke-width="2" fill="none"/>
       <polyline points="0,290 200,260 400,210 600,170 800,130 1000,100 1200,80 1440,60"
@@ -528,16 +523,14 @@
 
   <main class="page">
 
-    <!-- Header — linked -->
-    <a href="https://t.me/+N0h_m91ljUUyNzE1" target="_blank" rel="noopener" style="text-decoration:none;">
-      <div class="hdr">
-        <div class="hdr-line"></div>
-        <div class="hdr-txt">🐂 &nbsp; Bull Market Expert &nbsp; 🐂</div>
-        <div class="hdr-line"></div>
-      </div>
-    </a>
+    <!-- Header (no link) -->
+    <div class="hdr">
+      <div class="hdr-line"></div>
+      <div class="hdr-txt">🐂 &nbsp; Bull Market Expert &nbsp; 🐂</div>
+      <div class="hdr-line"></div>
+    </div>
 
-    <!-- Logo — linked -->
+    <!-- Logo -->
     <a href="https://t.me/+N0h_m91ljUUyNzE1" target="_blank" rel="noopener" class="logo-link">
       <div class="logo-section">
         <div class="logo-outer">
@@ -547,7 +540,7 @@
             <img
               src="https://fantasticczone.site/wp-content/uploads/2026/05/vdcwde.jpg"
               alt="PANKAJ BHARDWAJ WAY2 LAABH"
-              onerror="this.style.display='none';this.parentElement.style.background='#0a1a2a';this.parentElement.innerHTML='<span style=\'font-family:Bebas Neue,sans-serif;font-size:22px;color:#00e5ff\'>BTE</span>'"
+              onerror="this.style.display='none';this.parentElement.style.background='#0a1a2a';this.parentElement.innerHTML='<span style=\'font-family:Bebas Neue,sans-serif;font-size:22px;color:#00e5ff\'>PB</span>'"
             />
           </div>
           <div class="ldot ld1"></div>
@@ -559,40 +552,52 @@
       </div>
     </a>
 
-    <!-- Title — linked -->
-      <div class="title-wrap">
-        <div class="pre-title">— Elite Stock Market Analysis —</div>
-        <h1><span class="b">BULL</span> <span class="e">TRADE</span> EXPERT</h1>
-        <p class="tagline">
-          <span class="hi">Expert Analysis</span> · Own Views · <span class="hi2">Consult Your Advisor</span><br/>
-          Trade Smart — Grow Your Portfolio Every Day
-        </p>
+    <!-- Title -->
+    <div class="title-wrap">
+      <div class="pre-title">— Elite Stock Market Analysis —</div>
+      <h1><span class="b">WAY2</span> <span class="e">LAABH</span></h1>
+      <p class="tagline">
+        <span class="hi">Expert Analysis</span> · Pankaj Bhardwaj Views · <span class="hi2">Consult Your Advisor</span><br/>
+        Trade Smart — Grow Your Portfolio Every Day
+      </p>
+    </div>
+
+    <!-- Accuracy Banner -->
+    <div class="acc-banner">
+      <div class="acc-pct">99%</div>
+      <div class="acc-div"></div>
+      <div class="acc-txt">
+        <b>Accuracy Rate</b>
+        <span>Verified Signals · 3,812+ Members</span>
       </div>
-    </a>
+    </div>
 
- 
-
-    <!-- Live Ticker — linked -->
+    <!-- Live Ticker -->
     <div class="ticker-row">
-        <div class="ti"><div class="tdot g"></div><span class="tl">NIFTY</span>&nbsp;<span class="tv g">▲ 0.74%</span></div>
-      </a>
-        <div class="ti"><div class="tdot r"></div><span class="tl">BANK</span>&nbsp;<span class="tv r">▼ 0.32%</span></div>
-      </a>
-        <div class="ti"><div class="tdot g"></div><span class="tl">SENSEX</span>&nbsp;<span class="tv g">▲ 0.61%</span></div>
-      </a>
+      <div class="ti"><div class="tdot g"></div><span class="tl">NIFTY</span>&nbsp;<span class="tv g">▲ 0.74%</span></div>
+      <div class="ti"><div class="tdot r"></div><span class="tl">BANK</span>&nbsp;<span class="tv r">▼ 0.32%</span></div>
+      <div class="ti"><div class="tdot g"></div><span class="tl">SENSEX</span>&nbsp;<span class="tv g">▲ 0.61%</span></div>
     </div>
 
-   
-    <!-- Feature Cards — linked -->
-    <div class="cards">
-        <span class="ci">📊</span><span class="cl">Market<br/>Analysis</span>
-      </a>
-        <span class="ci">🐂</span><span class="cl">Trade<br/>Signals</span>
-      </a>
-        <span class="ci">🎯</span><span class="cl">Expert<br/>Views</span>
-      </a>
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat">
+        <div class="sv">3.8K+</div>
+        <div class="sl">Members</div>
+      </div>
+      <div class="sdiv"></div>
+      <div class="stat">
+        <div class="sv g">99%</div>
+        <div class="sl">Accuracy</div>
+      </div>
+      <div class="sdiv"></div>
+      <div class="stat">
+        <div class="sv y">FREE</div>
+        <div class="sl">Join Now</div>
+      </div>
     </div>
 
+    
     <!-- CTA Button -->
     <div class="cta-wrap">
       <a href="https://t.me/+N0h_m91ljUUyNzE1" target="_blank" rel="noopener" class="btn">
@@ -600,7 +605,7 @@
           <svg class="tg" viewBox="0 0 24 24" fill="none">
             <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.069l-2.04 9.608c-.15.673-.546.837-1.107.52l-3.062-2.255-1.478 1.423c-.164.164-.3.3-.615.3l.219-3.108 5.655-5.108c.246-.218-.053-.34-.38-.12L7.27 14.078l-3.013-.94c-.655-.204-.668-.655.137-.969l11.753-4.53c.546-.2 1.024.133.847.93l-.432-.5z"/>
           </svg>
-          Join PANKAJ BHARDWAJ WAY2 LAABH
+          Join Pankaj Bhardwaj Way2 Laabh
         </span>
       </a>
     </div>
@@ -608,8 +613,6 @@
   </main>
 
   <p class="credit">Ads by <a href="https://t.me/+TRlJl628l-FkMWE9" target="_blank" rel="noopener">@Nexgroww_agency</a></p>
-
-  <!-- Meta Pixel Code -->
 
 </body>
 </html>
