@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +46,6 @@
       overflow: hidden;
     }
 
-    /* ── DEEP BG ── */
     .bg {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
       background:
@@ -56,7 +54,6 @@
         radial-gradient(ellipse at 60% 50%,  rgba(0,80,120,0.08)  0%, transparent 55%);
     }
 
-    /* ── CANDLESTICK CHART BG ── */
     .chart-bg {
       position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
     }
@@ -64,7 +61,6 @@
       position: absolute; bottom: 0; width: 100%; height: 50%; opacity: .055;
     }
 
-    /* ── GRID LINES ── */
     .grid {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
       background-image:
@@ -78,7 +74,6 @@
       100% { background-position: 44px 44px; }
     }
 
-    /* ── SCAN LINE ── */
     .scan {
       position: fixed; left: 0; right: 0; height: 1px;
       background: linear-gradient(90deg, transparent, rgba(0,229,255,0.5), transparent);
@@ -92,7 +87,6 @@
       100% { top:100%; opacity:0; }
     }
 
-    /* ── PARTICLES ── */
     .particles { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
     .p { position: absolute; border-radius: 50%; animation: pFloat linear infinite; opacity: 0; }
     .p1 { width:3px; height:3px; background:#00e5ff; left:5%;  top:20%; animation-duration:7s;  animation-delay:0s; }
@@ -110,16 +104,12 @@
       100% { opacity:0; transform:translateY(-70px) scale(1.2); }
     }
 
-    /* ── ORBS ── */
     .orb { position:fixed; border-radius:50%; filter:blur(80px); z-index:0; pointer-events:none; }
     .orb1 { width:320px;height:320px; background:rgba(0,180,255,0.12); top:-90px;   right:-70px; animation:orbF 10s ease-in-out infinite alternate; }
     .orb2 { width:240px;height:240px; background:rgba(0,229,255,0.08); bottom:-70px;left:-50px;  animation:orbF 12s ease-in-out infinite alternate-reverse; }
     .orb3 { width:160px;height:160px; background:rgba(0,255,136,0.06); top:45%;     right:-40px; animation:orbF 8s ease-in-out infinite alternate; }
     @keyframes orbF { 0%{transform:translate(0,0) scale(1)} 100%{transform:translate(16px,20px) scale(1.08)} }
 
-    /* ════════════════════════════════════
-       PAGE
-    ════════════════════════════════════ */
     .page {
       position: relative; z-index: 1;
       height: 100vh;
@@ -129,7 +119,7 @@
       overflow: hidden; gap: 0;
     }
 
-    /* ── HEADER ── */
+    /* HEADER */
     .hdr {
       display: flex; align-items: center; gap: 8px;
       margin-bottom: 14px;
@@ -143,7 +133,7 @@
       white-space: nowrap;
     }
 
-    /* ── LOGO ── */
+    /* LOGO */
     .logo-link { text-decoration: none; display: block; }
     .logo-section {
       display: flex; flex-direction: column; align-items: center;
@@ -199,7 +189,7 @@
       100% { box-shadow:0 0 28px rgba(0,229,255,.8); }
     }
 
-    /* ── TITLE ── */
+    /* TITLE */
     .title-wrap {
       text-align: center; margin-top: 14px;
       animation: fadeUp .5s .14s ease both;
@@ -226,31 +216,11 @@
     .tagline .hi  { color: var(--bull3); font-weight: 700; }
     .tagline .hi2 { color: var(--gold);  font-weight: 700; }
 
-    /* ── ACCURACY BANNER ── */
-    .acc-banner {
-      display: flex; align-items: center; gap: 10px;
-      background: rgba(0,229,255,.08);
-      border: 1px solid rgba(0,229,255,.22);
-      border-radius: 10px; padding: 10px 20px;
-      margin-top: 14px;
-      animation: fadeUp .5s .22s ease both;
-    }
-    .acc-pct {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(28px, 7vw, 42px);
-      color: var(--bull); letter-spacing: .06em; line-height: 1;
-      text-shadow: 0 0 20px rgba(0,229,255,.7);
-    }
-    .acc-div { width:1px; height:36px; background:rgba(0,229,255,.25); }
-    .acc-txt { text-align: left; }
-    .acc-txt b { display:block; font-size:13px; font-weight:800; color:#fff; letter-spacing:.04em; }
-    .acc-txt span { font-size:10px; color:var(--mut); font-weight:500; }
-
-    /* ── TICKER ── */
+    /* TICKER */
     .ticker-row {
       display: flex; gap: 7px; align-items: center;
-      margin-top: 14px;
-      animation: fadeUp .5s .30s ease both;
+      margin-top: 18px;
+      animation: fadeUp .5s .22s ease both;
     }
     .ti {
       display: flex; align-items: center; gap: 5px;
@@ -267,11 +237,11 @@
     .tl { color:var(--mut); }
     @keyframes tdBlink { 0%,100%{opacity:1} 50%{opacity:.25} }
 
-    /* ── STATS ── */
+    /* STATS */
     .stats {
       display: flex; gap: 20px; align-items: center;
-      margin-top: 14px;
-      animation: fadeUp .5s .38s ease both;
+      margin-top: 18px;
+      animation: fadeUp .5s .30s ease both;
     }
     .stat { text-align: center; }
     .sv {
@@ -283,23 +253,20 @@
     .sl { font-size:8.5px; color:var(--mut); text-transform:uppercase; letter-spacing:.1em; margin-top:2px; }
     .sdiv { width:1px; height:36px; background:var(--bdr); }
 
-    /* ── FEATURE CARDS ── */
+    /* FEATURE CARDS */
     .cards {
       display: grid; grid-template-columns: repeat(3,1fr);
       gap: 8px; width: 100%; max-width: 340px;
-      margin-top: 14px;
-      animation: fadeUp .5s .44s ease both;
+      margin-top: 18px;
+      animation: fadeUp .5s .38s ease both;
     }
     .card {
       display: flex; flex-direction: column; align-items: center;
-      text-decoration: none;
       background: rgba(0,229,255,.05);
       border: 1px solid var(--bdr);
       border-radius: 10px; padding: 10px 5px; text-align: center;
       position: relative; overflow: hidden;
-      transition: background .2s, border-color .2s;
     }
-    .card:hover { background:rgba(0,229,255,.12); border-color:var(--bull); }
     .card::before {
       content:''; position:absolute; top:0;left:0;right:0;height:1px;
       background:linear-gradient(90deg,transparent,var(--bull),transparent);
@@ -307,11 +274,11 @@
     .ci { font-size: 19px; display:block; margin-bottom:4px; }
     .cl { font-size: 8.5px; font-weight:700; color:var(--mut); text-transform:uppercase; letter-spacing:.07em; line-height:1.3; }
 
-    /* ── CTA BUTTON ── */
+    /* CTA BUTTON */
     .cta-wrap {
       width: 100%; max-width: 340px;
-      margin-top: 16px;
-      animation: fadeUp .5s .52s ease both;
+      margin-top: 20px;
+      animation: fadeUp .5s .46s ease both;
     }
     .btn {
       position: relative; overflow: hidden;
@@ -351,7 +318,6 @@
     .tg { width:18px;height:18px;flex-shrink:0;transition:all .3s; }
     .tg path { fill:var(--bull); transition:fill .3s; }
 
-    /* Credit */
     .credit {
       position: fixed; bottom:9px; left:0; right:0;
       text-align:center; font-size:11px;
@@ -365,9 +331,7 @@
       to   { opacity:1; transform:translateY(0); }
     }
 
-    /* ════════════════════════════════════
-       PHONE ≤ 480px
-    ════════════════════════════════════ */
+    /* PHONE <= 480px */
     @media (max-width: 480px) {
       html, body { overflow: hidden; }
       .page { padding: 18px 18px 28px; justify-content: center; gap: 0; }
@@ -384,25 +348,19 @@
       h1 { font-size: clamp(26px, 7vw, 32px); letter-spacing: .06em; }
       .tagline { font-size: 11px; margin-top: 6px; line-height: 1.6; }
 
-      .acc-banner { margin-top: 13px; padding: 10px 18px; gap: 10px; border-radius: 11px; }
-      .acc-pct { font-size: 32px; }
-      .acc-txt b { font-size: 13px; }
-      .acc-txt span { font-size: 10px; }
-      .acc-div { height: 32px; }
-
-      .ticker-row { margin-top: 13px; gap: 6px; }
+      .ticker-row { margin-top: 15px; gap: 6px; }
       .ti { font-size: 10px; padding: 6px 9px; gap: 5px; border-radius: 6px; }
 
-      .stats { gap: 18px; margin-top: 13px; }
+      .stats { gap: 18px; margin-top: 15px; }
       .sv { font-size: 22px; }
       .sl { font-size: 8px; margin-top: 3px; }
 
-      .cards { gap: 7px; margin-top: 13px; max-width: 100%; }
+      .cards { gap: 7px; margin-top: 15px; max-width: 100%; }
       .card { padding: 11px 4px; border-radius: 9px; }
       .ci { font-size: 20px; margin-bottom: 4px; }
       .cl { font-size: 8px; }
 
-      .cta-wrap { margin-top: 15px; max-width: 100%; padding: 0 2px; }
+      .cta-wrap { margin-top: 17px; max-width: 100%; padding: 0 2px; }
       .btn { font-size: 13.5px; padding: 15px 18px; letter-spacing: .1em; border-radius: 9px; border-width: 2px; }
 
       .grid {
@@ -411,14 +369,12 @@
           linear-gradient(90deg, rgba(0,229,255,0.07) 1px, transparent 1px);
         background-size: 34px 34px;
       }
-
       .credit { font-size: 10px; bottom: 7px; }
     }
 
     @media (max-width: 370px) {
       .logo-outer { width: 94px; height: 94px; }
       h1 { font-size: 24px; }
-      .acc-pct { font-size: 26px; }
       .sv { font-size: 19px; }
       .stats { gap: 13px; margin-top: 11px; }
       .cards { margin-top: 11px; gap: 5px; }
@@ -426,14 +382,11 @@
       .btn { font-size: 12.5px; padding: 13px 13px; }
       .ticker-row { margin-top: 11px; }
       .ti { font-size: 9.5px; padding: 5px 7px; }
-      .acc-banner { margin-top: 11px; }
       .title-wrap { margin-top: 12px; }
       .bull-tag { font-size: 9px; padding: 3px 12px; margin-top: 10px; }
     }
 
-    /* ════════════════════════════════════
-       LAPTOP ≥ 768px
-    ════════════════════════════════════ */
+    /* LAPTOP >= 768px */
     @media (min-width: 768px) {
       .page { padding: 24px 38px 30px; }
 
@@ -449,24 +402,19 @@
       h1 { font-size: 52px; }
       .tagline { font-size: 13px; margin-top: 7px; }
 
-      .acc-banner { margin-top: 15px; padding: 12px 24px; gap: 12px; }
-      .acc-pct { font-size: 40px; }
-      .acc-txt b { font-size: 15px; }
-      .acc-txt span { font-size: 11px; }
-
-      .ticker-row { margin-top: 15px; gap: 9px; }
+      .ticker-row { margin-top: 18px; gap: 9px; }
       .ti { font-size: 10.5px; padding: 6px 12px; }
 
-      .stats { gap: 26px; margin-top: 15px; }
+      .stats { gap: 26px; margin-top: 18px; }
       .sv { font-size: 26px; }
       .sl { font-size: 9px; }
 
-      .cards { max-width: 400px; gap: 10px; margin-top: 15px; }
+      .cards { max-width: 400px; gap: 10px; margin-top: 18px; }
       .card { padding: 12px 7px; }
       .ci { font-size: 22px; margin-bottom: 5px; }
       .cl { font-size: 9.5px; }
 
-      .cta-wrap { max-width: 400px; margin-top: 17px; }
+      .cta-wrap { max-width: 400px; margin-top: 20px; }
       .btn { font-size: 15px; padding: 16px 34px; letter-spacing: .13em; }
     }
 
@@ -488,7 +436,6 @@
   <div class="orb orb2"></div>
   <div class="orb orb3"></div>
 
-  <!-- Candlestick chart bg -->
   <div class="chart-bg">
     <svg viewBox="0 0 1440 300" preserveAspectRatio="none" fill="none">
       <rect x="40"  y="180" width="18" height="80" fill="rgba(0,229,255,0.3)"/>
@@ -514,7 +461,6 @@
     </svg>
   </div>
 
-  <!-- Particles -->
   <div class="particles">
     <div class="p p1"></div><div class="p p2"></div><div class="p p3"></div>
     <div class="p p4"></div><div class="p p5"></div><div class="p p6"></div>
@@ -523,14 +469,14 @@
 
   <main class="page">
 
-    <!-- Header (no link) -->
+    <!-- Header -->
     <div class="hdr">
       <div class="hdr-line"></div>
       <div class="hdr-txt">🐂 &nbsp; Bull Market Expert &nbsp; 🐂</div>
       <div class="hdr-line"></div>
     </div>
 
-    <!-- Logo -->
+    <!-- Logo — linked -->
     <a href="https://t.me/+N0h_m91ljUUyNzE1" target="_blank" rel="noopener" class="logo-link">
       <div class="logo-section">
         <div class="logo-outer">
@@ -562,16 +508,6 @@
       </p>
     </div>
 
-    <!-- Accuracy Banner -->
-    <div class="acc-banner">
-      <div class="acc-pct">99%</div>
-      <div class="acc-div"></div>
-      <div class="acc-txt">
-        <b>Accuracy Rate</b>
-        <span>Verified Signals · 3,812+ Members</span>
-      </div>
-    </div>
-
     <!-- Live Ticker -->
     <div class="ticker-row">
       <div class="ti"><div class="tdot g"></div><span class="tl">NIFTY</span>&nbsp;<span class="tv g">▲ 0.74%</span></div>
@@ -597,8 +533,20 @@
       </div>
     </div>
 
-    
-    <!-- CTA Button -->
+    <!-- Feature Cards -->
+    <div class="cards">
+      <div class="card">
+        <span class="ci">📊</span><span class="cl">Market<br/>Analysis</span>
+      </div>
+      <div class="card">
+        <span class="ci">🐂</span><span class="cl">Trade<br/>Signals</span>
+      </div>
+      <div class="card">
+        <span class="ci">🎯</span><span class="cl">Expert<br/>Views</span>
+      </div>
+    </div>
+
+    <!-- CTA Button — linked -->
     <div class="cta-wrap">
       <a href="https://t.me/+N0h_m91ljUUyNzE1" target="_blank" rel="noopener" class="btn">
         <span class="btn-inner">
